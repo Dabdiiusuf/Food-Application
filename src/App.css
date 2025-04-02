@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins", sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #fff3cd;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.background-img {
+  background-image: url(./Comps/Image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 38rem;
+  width: 100vw;
+  position: relative;
+  margin-bottom: 8rem;
+}
+
+.side-bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 3rem;
+  background-color: rgb(113, 8, 8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.left-side {
+  left: 2rem;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.right-side {
+  right: 2rem;
+  writing-mode: vertical-rl;
+}
+
+.input-wrapper {
+  width: 80%;
+  position: relative;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 26rem;
+  height: 12rem;
+  background-color: #fff3cd;
+  align-items: center;
+  border-radius: 85px;
+  gap: 12px;
+}
+
+.search-box input {
+  width: 100%;
+  border-radius: 50px;
+  padding: 8px 1rem;
+  box-shadow: 0px 3px 5px #979797;
+  border: none;
+}
+
+.search-box button {
+  border-radius: 50px;
+  height: 90%;
+  width: 50px;
+  transition: 0.5s;
+  position: absolute;
+  right: -1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background-color: white;
+}
+
+.search-box h2 {
+  padding-bottom: 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.search-box button:hover {
+  cursor: pointer;
+  background-color: rgb(192, 40, 40);
+}
+
+.search-box p {
+  color: rgb(192, 40, 40);
+  font-size: 13px;
+}
+
+.food-details {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fff3cd;
+  justify-content: center;
+  text-align: left;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.food-details > div {
+  transition: transform 0.3s ease;
+}
+
+.food-details > div:hover {
+  transform: translateY(-5px);
+}
+
+.food-details button {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  background-color: rgb(113, 8, 8);
+  color: white;
+  font-weight: bold;
+}
+
+.food-details button:hover {
+  cursor: pointer;
+  color: black;
+  background-color: rgb(211, 99, 99);
+  transition: 0.5s;
+}
+
+.food-details h4 {
+  margin: 20px;
+}
+
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(107, 100, 70, 0.3);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(8px);
+}
+
+.modalContainer {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: rgb(113, 8, 8);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  color: white;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 5px grey;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5050;
+}
+
+.modalContainer .title {
+  display: inline-block;
+  text-align: center;
+}
+
+.titleCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.titleCloseBtn button {
+  box-shadow: inset 0 0 5px grey;
+  background: rgb(255, 255, 255);
+  border-radius: 40px;
+  padding: 12px;
+  color: black;
+}
+
+.modalContainer .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.modalContainer .footer {
+  flex: 20%;
+  display: flex;
+  font-size: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  list-style-type: none;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-bottom: 3rem;
+  }
+
+  .background-img {
+    background-image: url(./Comps/Image.jpg);
+    margin-bottom: 6rem;
+  }
+
+  .food-details {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .food-details > div h2 {
+    margin-bottom: 1rem;
+  }
+
+  .search-box {
+    max-width: 300px;
+    margin-right: 1rem;
+  }
+  .search-box > h2 {
+    margin-left: 2rem;
+  }
+
+  .modalContainer {
+    width: 300px;
+    height: 400px;
+  }
+}
